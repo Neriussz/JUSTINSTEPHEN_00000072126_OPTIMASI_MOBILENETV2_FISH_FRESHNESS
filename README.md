@@ -138,6 +138,10 @@ This research follows the Knowledge Discovery in Databases (KDD) framework:
 
 ![Confusion Matrix](results/confusion_matrix.png)
 
+### Grad-CAM Visualization
+
+![Grad-CAM](results/grad_cam.png)
+
 ---
 
 ## 📊 Comparison with Previous Research
