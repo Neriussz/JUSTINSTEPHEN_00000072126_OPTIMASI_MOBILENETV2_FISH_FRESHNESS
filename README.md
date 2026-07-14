@@ -17,6 +17,19 @@ The proposed approach aims to improve classification performance while maintaini
 
 ---
 
+## 📄 Documentation
+
+The repository includes the following documents:
+
+| Document | Description |
+|-----------|-------------|
+| ARTICLE_JOURNAL_00000072126.pdf | Research article version |
+| FINAL_OPTIMASI_MOBILENETV2.pdf | Final thesis report |
+
+Files are available in the `docs/` directory.
+
+---
+
 ## 🎯 Research Objectives
 
 - Develop a fish freshness classification model based on digital images.
@@ -159,17 +172,25 @@ The proposed MobileNetV2 model achieved higher classification performance while 
 
 ```text
 .
-├── dataset/
+├── docs/
+│   ├── article_journal.pdf
+│   └── thesis_report.pdf
+│
+├── model/
+│   └── mobilenetv2_model.py
+│
 ├── notebook/
 │   └── skripsi_final.ipynb
-├── model/
-│   └── best_model.keras
+│
 ├── results/
-│   ├── training_result.png
+│   ├── transfer_learning.png
+│   ├── fine_tuning.png
 │   ├── confusion_matrix.png
-│   └── gradcam.png
+│   └── grad_cam.png
+│
 ├── README.md
-└── requirements.txt
+├── requirements.txt
+└── LICENSE
 ```
 
 ---
