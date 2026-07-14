@@ -251,14 +251,11 @@ Install dependencies:
 ```bash
 pip install -r requirements.txt
 ```
-
----
-
-![GitHub last commit](https://img.shields.io/github/last-commit/Neriussz/JUSTINSTEPHEN_00000072126_OPTIMASI_MOBILENETV2_FISH_FRESHNESS)
-![GitHub repo size](https://img.shields.io/github/repo-size/Neriussz/JUSTINSTEPHEN_00000072126_OPTIMASI_MOBILENETV2_FISH_FRESHNESS)
-
 ---
 
 ## 📚 Citation
 
 Stephen, J. (2026). *Optimasi MobileNetV2 Menggunakan Strategi Fine-Tuning untuk Klasifikasi Kesegaran Ikan Berbasis Citra Digital*. Undergraduate Thesis, Universitas Multimedia Nusantara.
+
+![GitHub last commit](https://img.shields.io/github/last-commit/Neriussz/JUSTINSTEPHEN_00000072126_OPTIMASI_MOBILENETV2_FISH_FRESHNESS)
+![GitHub repo size](https://img.shields.io/github/repo-size/Neriussz/JUSTINSTEPHEN_00000072126_OPTIMASI_MOBILENETV2_FISH_FRESHNESS)
