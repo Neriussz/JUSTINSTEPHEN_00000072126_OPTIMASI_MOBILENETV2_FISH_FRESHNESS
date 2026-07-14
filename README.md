@@ -1,37 +1,57 @@
-# JUSTINSTEPHEN_00000072126_OPTIMASI_MOBILENETV2_FISH_FRESHNESS
 # Optimasi MobileNetV2 Menggunakan Strategi Fine-Tuning untuk Klasifikasi Kesegaran Ikan Berbasis Citra Digital
-Optimized MobileNetV2 using transfer learning and fine-tuning for fish freshness classification based on fish eye images.
 
-## 📖 Deskripsi Penelitian
+## 👨‍🎓 Author
 
-Penelitian ini bertujuan untuk mengoptimalkan performa MobileNetV2 dalam melakukan klasifikasi kesegaran ikan berdasarkan citra mata ikan. Permasalahan utama dalam penentuan tingkat kesegaran ikan secara visual adalah kemiripan karakteristik antar kelas serta subjektivitas penilaian manusia. Oleh karena itu, penelitian ini menerapkan pendekatan Transfer Learning dan Fine-Tuning pada arsitektur MobileNetV2 untuk meningkatkan kemampuan ekstraksi fitur visual dan performa klasifikasi. :contentReference[oaicite:0]{index=0}
+**Justin Stephen**  
+NIM: 00000072126  
+Program Studi Sistem Informasi  
+Universitas Multimedia Nusantara
 
 ---
 
-## 🎯 Tujuan Penelitian
+## 📖 Overview
 
-- Mengembangkan model klasifikasi kesegaran ikan berbasis citra digital.
-- Mengimplementasikan MobileNetV2 dengan strategi Transfer Learning.
-- Mengoptimalkan performa model menggunakan Fine-Tuning.
-- Menganalisis peningkatan performa setelah proses Fine-Tuning dilakukan.
+Fish freshness assessment is commonly performed through manual visual inspection, which may lead to subjective and inconsistent evaluations. This research proposes a fish freshness classification system based on fish eye images using MobileNetV2 combined with Transfer Learning and Fine-Tuning strategies.
+
+The proposed approach aims to improve classification performance while maintaining computational efficiency. Experimental results demonstrate that Fine-Tuning successfully improves model performance on the Freshness of Fish Eyes (FFE) dataset.
+
+---
+
+## 🎯 Research Objectives
+
+- Develop a fish freshness classification model based on digital images.
+- Implement MobileNetV2 using Transfer Learning.
+- Optimize model performance through Fine-Tuning.
+- Evaluate classification performance using multiple evaluation metrics.
 
 ---
 
 ## 📂 Dataset
 
-Dataset yang digunakan adalah **Freshness of Fish Eyes (FFE)** yang terdiri dari citra mata ikan dengan tiga kategori tingkat kesegaran:
+### Freshness of Fish Eyes (FFE) Dataset
+
+Dataset Source:  
+https://data.mendeley.com/datasets/xzyx7pbr3w/1
+
+### Classes
 
 - Highly Fresh
 - Fresh
 - Not Fresh
 
-Jumlah data yang digunakan dalam penelitian sebanyak **4.404 citra** setelah proses seleksi dan pembersihan data dilakukan.
+### Dataset Information
+
+| Description | Value |
+|------------|---------|
+| Original Images | 4,414 |
+| Images After Cleaning | 4,404 |
+| Number of Classes | 3 |
 
 ---
 
-## 🔬 Metodologi
+## 🔬 Research Methodology
 
-Penelitian dilakukan menggunakan framework **Knowledge Discovery in Databases (KDD)** yang terdiri dari:
+This research follows the Knowledge Discovery in Databases (KDD) framework:
 
 1. Data Selection
 2. Data Preprocessing
@@ -39,86 +59,110 @@ Penelitian dilakukan menggunakan framework **Knowledge Discovery in Databases (K
 4. Model Development
 5. Evaluation
 
-Tahapan preprocessing yang dilakukan:
+### Preprocessing
 
-- Resize image 224×224
-- Normalisasi citra
+- Image resizing (224 × 224)
+- Pixel normalization
 - Data augmentation
   - Rotation
   - Zoom
   - Horizontal Flip
 
+### Data Splitting
+
+- Training Data : 80%
+- Testing Data : 20%
+
 ---
 
-## 🧠 Model Architecture
+## 🧠 Proposed Model
 
-Model utama yang digunakan:
+### Architecture
 
 - MobileNetV2
 - Transfer Learning
 - Fine-Tuning
+- Softmax Classifier
 
-Konfigurasi:
+### Training Configuration
 
-| Parameter | Nilai |
+| Parameter | Value |
 |------------|---------|
 | Input Size | 224 × 224 |
 | Optimizer | Adam |
 | Batch Size | 32 |
-| Transfer Learning LR | 0.0003 |
-| Fine-Tuning LR | 0.00001 |
-| Output Class | 3 |
+| Transfer Learning Learning Rate | 0.0003 |
+| Fine-Tuning Learning Rate | 0.00001 |
+| Output Classes | 3 |
 
 ---
 
-## 📊 Hasil Penelitian
+## 📊 Experimental Results
 
-### Transfer Learning
+### Model Performance
 
-| Metric | Hasil |
-|----------|---------|
-| Validation Accuracy | 60.14% |
-| Validation Loss | 0.86 |
+| Metric | Transfer Learning | Fine-Tuning |
+|----------|----------|----------|
+| Validation Accuracy | 60.14% | 69.48% |
+| Validation Loss | 0.86 | 0.75 |
 
-### Fine-Tuning
+### Final Evaluation Results
 
-| Metric | Hasil |
-|----------|---------|
-| Validation Accuracy | 69.48% |
-| Validation Loss | 0.75 |
+| Metric | Score |
+|----------|----------|
 | Accuracy | 69.70% |
 | Precision | 69.01% |
 | Recall | 68.92% |
 | F1-Score | 68.87% |
 
-Penerapan Fine-Tuning berhasil meningkatkan validation accuracy dari 60,14% menjadi 69,48% serta meningkatkan performa klasifikasi secara keseluruhan. :contentReference[oaicite:1]{index=1}
+### Key Findings
+
+- Fine-Tuning improved validation accuracy from **60.14%** to **69.48%**.
+- MobileNetV2 achieved competitive performance with only **2.59 million parameters**.
+- The model successfully classified fish freshness into three categories.
+- Grad-CAM visualization showed that the model focused on relevant fish-eye regions during prediction.
 
 ---
 
-## 📈 Evaluation Metrics
+## 📈 Performance Visualization
 
-Evaluasi model dilakukan menggunakan:
+### Training Accuracy & Loss
 
-- Accuracy
-- Precision
-- Recall
-- F1-Score
-- Confusion Matrix
-- Grad-CAM
+![Training Result](results/training_result.png)
+
+### Confusion Matrix
+
+![Confusion Matrix](results/confusion_matrix.png)
+
+### Grad-CAM Visualization
+
+![Grad-CAM](results/gradcam.png)
 
 ---
 
-## 📁 Struktur Repository
+## 📊 Comparison with Previous Research
 
-```
+| Model | Parameters (Million) | Accuracy (%) |
+|---------|---------|---------|
+| MobileNetV1 MB-BE | 3.16 | 63.21 |
+| Proposed MobileNetV2 | 2.59 | 69.48 |
+
+The proposed MobileNetV2 model achieved higher classification performance while using fewer parameters compared to the previous MobileNetV1 MB-BE approach.
+
+---
+
+## 📁 Repository Structure
+
+```text
 .
 ├── dataset/
 ├── notebook/
 │   └── skripsi_final.ipynb
 ├── model/
+│   └── best_model.keras
 ├── results/
-│   ├── confusion_matrix.png
 │   ├── training_result.png
+│   ├── confusion_matrix.png
 │   └── gradcam.png
 ├── README.md
 └── requirements.txt
@@ -146,15 +190,6 @@ pip install -r requirements.txt
 
 ---
 
-## 👨‍🎓 Author
-
-**Justin Stephen**  
-NIM: 00000072126  
-Program Studi Sistem Informasi  
-Universitas Multimedia Nusantara
-
----
-
 ## 📚 Citation
 
-Justin Stephen. *Optimasi MobileNetV2 Menggunakan Strategi Fine-Tuning untuk Klasifikasi Kesegaran Ikan Berbasis Citra Digital*. Universitas Multimedia Nusantara, 2026.
+Stephen, J. (2026). *Optimasi MobileNetV2 Menggunakan Strategi Fine-Tuning untuk Klasifikasi Kesegaran Ikan Berbasis Citra Digital*. Undergraduate Thesis, Universitas Multimedia Nusantara.
