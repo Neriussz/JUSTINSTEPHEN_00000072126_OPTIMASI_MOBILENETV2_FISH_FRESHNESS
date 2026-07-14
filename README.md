@@ -1,5 +1,9 @@
 # Optimasi MobileNetV2 Menggunakan Strategi Fine-Tuning untuk Klasifikasi Kesegaran Ikan Berbasis Citra Digital
 
+![Python](https://img.shields.io/badge/Python-3.11-blue)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-2.16.1-orange)
+![Keras](https://img.shields.io/badge/Keras-3.3.3-red)
+
 ## 👨‍🎓 Author
 
 **Justin Stephen**  
@@ -23,8 +27,8 @@ The repository includes the following documents:
 
 | Document | Description |
 |-----------|-------------|
-| ARTICLE_JOURNAL_00000072126.pdf | Research article version |
-| FINAL_OPTIMASI_MOBILENETV2.pdf | Final thesis report |
+| article_journal.pdf | Research article version |
+| thesis_report.pdf | Final thesis report |
 
 Files are available in the `docs/` directory.
 
