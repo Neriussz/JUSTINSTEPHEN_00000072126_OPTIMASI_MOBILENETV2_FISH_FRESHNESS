@@ -126,17 +126,17 @@ This research follows the Knowledge Discovery in Databases (KDD) framework:
 
 ## 📈 Performance Visualization
 
-### Training Accuracy & Loss
+### Transfer Learning
 
-![Training Result](results/training_result.png)
+![Transfer Learning](results/transfer_learning.png)
+
+### Fine-Tuning
+
+![Fine-Tuning](results/fine_tuning.png)
 
 ### Confusion Matrix
 
 ![Confusion Matrix](results/confusion_matrix.png)
-
-### Grad-CAM Visualization
-
-![Grad-CAM](results/gradcam.png)
 
 ---
 
