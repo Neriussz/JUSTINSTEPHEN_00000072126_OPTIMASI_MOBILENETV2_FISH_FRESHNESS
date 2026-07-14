@@ -21,6 +21,16 @@ The proposed approach aims to improve classification performance while maintaini
 
 ---
 
+## 🚀 Research Highlights
+
+- Fish freshness classification using fish eye images.
+- MobileNetV2 with Transfer Learning and Fine-Tuning.
+- Validation accuracy improved from 60.14% to 69.48%.
+- Lightweight model with only 2.59 million parameters.
+- Grad-CAM used for model interpretability.
+
+---
+
 ## 📄 Documentation
 
 The repository includes the following documents:
@@ -75,6 +85,14 @@ This research follows the Knowledge Discovery in Databases (KDD) framework:
 3. Data Transformation
 4. Model Development
 5. Evaluation
+
+## 🧠 Model Architecture
+
+![Architecture](results/architecture.png)
+
+## 🔄 Research Workflow
+
+![Workflow](results/workflow.png)
 
 ### Preprocessing
 
@@ -155,9 +173,17 @@ This research follows the Knowledge Discovery in Databases (KDD) framework:
 
 ![Confusion Matrix](results/confusion_matrix.png)
 
+## 🔍 Confusion Matrix Analysis
+
+The model achieved the best performance on the Highly Fresh class. Most misclassifications occurred between Fresh and Highly Fresh categories due to similar visual characteristics of fish eyes.
+
 ### Grad-CAM Visualization
 
 ![Grad-CAM](results/grad_cam.png)
+
+## 🎯 Grad-CAM Interpretation
+
+Grad-CAM visualization indicates that the model focuses primarily on the pupil, cornea, and reflective regions of the fish eye when performing freshness classification. This suggests that the model learns relevant visual features rather than relying on background information.
 
 ---
 
@@ -169,6 +195,15 @@ This research follows the Knowledge Discovery in Databases (KDD) framework:
 | Proposed MobileNetV2 | 2.59 | 69.48 |
 
 The proposed MobileNetV2 model achieved higher classification performance while using fewer parameters compared to the previous MobileNetV1 MB-BE approach.
+
+---
+
+## 📌 Research Contributions
+
+1. Implementation of MobileNetV2 for fish freshness classification.
+2. Optimization through Transfer Learning and Fine-Tuning.
+3. Comparative evaluation against previous MobileNetV1 MB-BE research.
+4. Integration of Grad-CAM for model explainability.
 
 ---
 
@@ -216,6 +251,11 @@ Install dependencies:
 ```bash
 pip install -r requirements.txt
 ```
+
+---
+
+![GitHub last commit](https://img.shields.io/github/last-commit/Neriussz/JUSTINSTEPHEN_00000072126_OPTIMASI_MOBILENETV2_FISH_FRESHNESS)
+![GitHub repo size](https://img.shields.io/github/repo-size/Neriussz/JUSTINSTEPHEN_00000072126_OPTIMASI_MOBILENETV2_FISH_FRESHNESS)
 
 ---
 
